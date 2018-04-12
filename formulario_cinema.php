@@ -15,9 +15,9 @@
 		
 		<h3>Endereço</h3>
 		
-		CEP: <input type="text" name="rua"><br/>
-		Número: <input type="text" name="bairro"><br/>
-		Complemento: <input type="text" name="cidade"><br/>
+		CEP: <input type="text" name="cep"><br/>
+		Número: <input type="text" name="numero"><br/>
+		Complemento: <input type="text" name="complemento"><br/>
 
 
 		<button>Cadastrar</button>

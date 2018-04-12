@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title></title>
+	<meta charset="utf-8">
 	<script type="text/javascript">
 function cadastrosuccessfully() {
 			setTimeout("window.location ='formulario_cinema.php'", 2000);
@@ -16,13 +17,13 @@ function cadastrosuccessfully() {
 
 		$nome = $_POST['nome'];
 		$lotacao = $_POST['lotacao'];
-		$cep = $_POST['rua'];
-		$numero = $_POST['bairro'];
-		$complemento = $_POST['cidade'];
+		$cep = $_POST['cep'];
+		$numero = $_POST['numero'];
+		$complemento = $_POST['complemento'];
+
+		$sql = mysqli_query($MySQLiconn,"INSERT INTO cinema(idcinema, nome, lotacao, cep_idendereco, numero, complemento) VALUES (null,'$nome', '$lotacao', '$cep', '$numero', '$complemento')");
 		
-		$sql = mysql_query("INSERT INTO cinema(nome, lotacao, cep, numero, complemento) VALUES ('$nome', '$lotacao', '$cep', '$numero', '$complemento')");
-		
-			echo "<center><h>Cadastro realizado com sucesso!</h></center>";
+			echo "<center><h2>Cadastro realizado com sucesso!</h2></center>";
 
 			echo "<script>cadastrosuccessfully()</script>";
 
