@@ -1,0 +1,21 @@
+.princ{
+	color: blue;
+	font-size: 1.6em;
+	text-align: center;
+	font-family: 'Oswald', sans-serif;
+}
+
+.echo{
+	font-size: 1.3em;
+	color: black;
+	font-family: 'Slabo 27px', serif;
+	text-align: center;
+
+}
+
+.cinema{
+	color: blue;
+	text-align: center;
+	font-family: 'PT Sans', sans-serif;
+	font-size: 4em;
+}
