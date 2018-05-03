@@ -11,8 +11,11 @@
   <title>Cartaz de Filmes</title>
 
     <link rel="stylesheet" href="style1.css">
+    
+    
 
-    <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.3/lumen/bootstrap.min.css" rel="stylesheet" integrity="sha384-lBO0+E/aIJhpRIYjP6dJ1mNYgo3hhUBPcF74XRfOM27g7WmDuitolvnUENdDG4QI" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.1.0/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-kCsv8pSAWtRge/+zcLDeqwoWhTQSUX2esQPYOsocgrg1eMj7T2wrTJP348T3mpBU" crossorigin="anonymous">
 
 
 <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
@@ -27,7 +30,6 @@
 
 </head>
 <body>
-
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -38,26 +40,33 @@
       <ul class="navbar-nav mr-auto">
         
         <li class="nav-item">
-          <a class="nav-link" href=""></a>
+          <a class="nav-link" href="cartazfilme.php">Filmes em Cartaz</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../cinemas/cinema.php">Cinemas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="../cartaz/cartazfilme.php"></a>
+          <a class="nav-link" href="../cep.php">C.E.P</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="">Filmes em Sessão</a>
+          <a class="nav-link" href="../formulario_cinema.php">Cadastro de Cinema</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../formulario_sala2.php">Cadastro de Sala</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../cadasator.php">Cadastro de Ator</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../cadastro_diretor.php">Cadastro de Diretor</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../cadasfilme.php">Cadastro de Filmes</a>
         </li>
       </ul>
-      <form class="form-inline my-2 my-lg-0" action="../busca.php" method="post">
-        <input name="buscar" class="form-control mr-sm-2" type="text" placeholder="Buscar">
-        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
-      </form>
+      
     </div>
   </nav>
-
-  </br>
 
 <div class="container-fluid">
     <form method="post">
