@@ -1,6 +1,6 @@
 <?php
 
-include_once 'diretor.php';
+include_once 'bd.php';
 
 /* code for TIME insert */
 if(isset($_POST['save']))

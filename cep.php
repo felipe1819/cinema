@@ -1,13 +1,14 @@
 <?php
-include_once 'crud_cad_funciona.php';
+  include_once 'crud_cep.php';
 ?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<title>Cadastro de Cinemas</title>
+		<title>Cadastro de C.E.P</title>
 		<link type="text/css" rel="stylesheet" href ="style.css">
 		
 
@@ -74,39 +75,39 @@ include_once 'crud_cad_funciona.php';
 		
 		<form class="form-horizontal" method="post">
 			<div class="a">
-			<h1>Cadastro de Cinemas:</h1>
+			<h1>Cadastro de C.E.P:</h1>
 			<br/>
 			</div>
+					
 					<div class="form-gruop">
 					
 					<label>
-					<input type="text" class="form-control" placeholder="Nome" name="nome" value="<?php if(isset($_GET['edit'])) echo $getROW['nome'];  ?>" /></label></br>
-					</div>
+						<div class="form-group">
+					<input type="text" class="form-control" placeholder="Numero do cep" name="idendereco" value="<?php if(isset($_GET['edit'])) echo $getROW['idendereco'];  ?>" />
+						</div>
+					</label></br>
+					<div class="form-group">
+					<input type="text" class="form-control" placeholder="Rua" name="rua" value="<?php if(isset($_GET['edit'])) echo $getROW['rua'];  ?>" />
+						</div>
 
-					<div class="form-gruop">
-					
-					<label>
-					<input type="text" class="form-control" placeholder="Lotacao" name="lotacao" value="<?php if(isset($_GET['edit'])) echo $getROW['lotacao'];  ?>" /></label></br>
-					</div>
+					<div class="form-group">
+					<input type="text" class="form-control" placeholder="Bairro" name="bairro" value="<?php if(isset($_GET['edit'])) echo $getROW['bairro'];  ?>" />
+						</div>
 
-					<div class="form-gruop">
+					<div class="form-group">
+					<input type="text" class="form-control" placeholder="Cidade" name="cidade" value="<?php if(isset($_GET['edit'])) echo $getROW['cidade'];  ?>" />
+						</div>
 					
-					<label>
-					<input type="text" class="form-control" placeholder="CEP" name="cep_idendereco" value="<?php if(isset($_GET['edit'])) echo $getROW['cep_idendereco'];  ?>" /></label></br>
-					</div>
+				<label>
+						<div class="form-group">
+					<input type="text" class="form-control" placeholder="Estado" name="estado" value="<?php if(isset($_GET['edit'])) echo $getROW['estado'];  ?>" />
+						</div>
+				</label></br>
 
-					<div class="form-gruop">
+				
 					
-					<label>
-					<input type="text" class="form-control" placeholder="Numero" name="numero" value="<?php if(isset($_GET['edit'])) echo $getROW['numero'];  ?>" /></label></br>
-					</div>
 
-					<div class="form-gruop">
-					
-					<label>
-					<input type="text" class="form-control" placeholder="Complemento" name="complemento" value="<?php if(isset($_GET['edit'])) echo $getROW['complemento'];  ?>" /></label></br>
-					</div> 
-					
+								
 
 				 	<?php
 						if(isset($_GET['edit']))
@@ -124,6 +125,8 @@ include_once 'crud_cad_funciona.php';
 					?>
 		
 		</form>
+	
+
 
 			</br></br></br>
 
@@ -131,18 +134,17 @@ include_once 'crud_cad_funciona.php';
 			<table border="2" class="table table-hover">
 				<thead>
 						<tr>
-							<td>Id </td>
-							<td>Nome </td>
-							<td>Lotação </td>
-							<td>CEP </td>
-							<td>Número </td>
-							<td>Complemento </td>
+							<td>Número do cep </td>
+							<td>Rua </td>
+							<td>Bairro </td>
+							<td>Cidade </td>
+							<td>Estado </td>
 							<td>Editar </td>
 							<td>Excluir </td>
 						</tr>
 				</thead>
 				<?php
-					$res = $MySQLiconn->query("SELECT * FROM cinema");
+					$res = $MySQLiconn->query("SELECT * FROM cep");
 					while($row=$res->fetch_array())
 					{
 						?>
@@ -150,14 +152,14 @@ include_once 'crud_cad_funciona.php';
 					<tbody>
 					    <div>
 					    <tr>
-					    	<td><label><?php echo $row["idcinema"]; ?></label></td>
-					    	<td><label><?php echo $row['nome']; ?></label></td>
-						    <td><label><?php echo $row['lotacao']; ?></label></td>
-						    <td><label><?php echo $row['cep_idendereco']; ?></label></td>
-						    <td><label><?php echo $row['numero']; ?></label></td>
-						    <td><label><?php echo $row['complemento']; ?></label></td>
-						    <td><a href="?edit=<?php echo $row['idcinema']; ?>" onclick="return confirm('Deseja Editar?'); " >editar</a></td>
-							<td><a href="?del=<?php echo $row['idcinema']; ?>" onclick="return confirm('Deseja Deletar?'); " >deletar</a></td>
+					    	<td><label><?php echo $row["idendereco"]; ?></label></td>
+					    	<td><label><?php echo $row["rua"]; ?></label></td>
+					    	<td><label><?php echo $row["bairro"]; ?></label></td>
+					    	<td><label><?php echo $row["cidade"]; ?></label></td>
+					    	<td><label><?php echo $row["estado"]; ?></label></td>
+					    	
+						    <td><a href="?edit=<?php echo $row['idendereco']; ?>" onclick="return confirm('Deseja Editar?'); " >editar</a></td>
+							<td><a href="?del=<?php echo $row['idendereco']; ?>" onclick="return confirm('Deseja Deletar?'); " >deletar</a></td>
 						</tr>						    						
 					    </div>
 					</tbody>
@@ -168,11 +170,10 @@ include_once 'crud_cad_funciona.php';
 					
 			</table>
 		</div>
-		</div>
+					</div>
 
-<script src="js/jquery-3.2.1.min.js"></script> 
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+
+
 
 
 	</body>
